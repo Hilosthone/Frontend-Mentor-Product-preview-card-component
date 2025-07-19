@@ -1,132 +1,174 @@
-*{
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
 }
 
 body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  text-align: center;
+    background-color: hsl(30, 54%, 90%);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
-.card {
-  background-color: hsl(0, 0%, 100%); /* or just 'white' */
-  border-radius: 0.75rem; /* 12px */
-  max-width: 600px;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns for desktop */
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+section {
+    font-family: 'Outfit', sans-serif;
+    justify-content: center;
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 20px;
+    padding: 2.9rem;
+    max-width: 600px;
+    gap: 2.5rem;
 }
 
-.card-img img{
+img{
+    border-radius: 20px;
     width: 100%;
-    height: auto;
-    display: block;
+    margin-bottom: 10px;
 }
 
-.card-content {
-  padding: 2rem;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.product-type {
-  color: hsl(228, 12%, 48%);
-  font-size: 0.75rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.product-title{
-    font-family: 'Fraunces', serif;
-    font-size: 2rem;
+.recipe-name{
+    color: hsl(24, 5%, 18%);
     font-weight: 700;
-    color: hsl(212, 21%, 14%);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    width: auto;
+}j
+
+.prep{
+    margin-top: 10px;
+    background-color: hsl(28, 63%, 95%);
+    border-radius: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.product-description {
-  color: hsl(228, 12%, 48%);
-  font-size: 0.875rem;
-  line-height: 1.5;
+.prep-time{
+    font-weight: 700;
+    color: hsl(332, 51%, 32%);
+    font-size: 1rem;
+    margin: 10px;
 }
 
-.product-description p {
-  margin-bottom: 1rem;
+.prep-time-list {
+    list-style-type: disc;
+    padding: 0;
+    margin: 0;
 }
 
-.product-description {
-    font-family: 'Montserrat', sans-serif;
+ul.prep-time-list li {
+    margin: 5px 25px;
+    font-weight: 400;
+    color: hsl(28, 63%, 32%);
 }
 
-.product-price {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.strong {
+    font-weight: 700;
+    font-size: large;
+    color: hsl(28, 63%, 32%);
 }
 
-.product-price .discounted-price {
-  font-family: 'Fraunces', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: hsl(158, 36%, 37%);
+.Ingredients{
+    font-weight: 700;
+    font-size: 2.0rem;
+    color: hsl(28, 63%, 32%);
+    margin: 15px;
+    width: 100%;
+}
+.Ingredients-list {
+    margin-left: 15px;
+    list-style-type: disc;
+    padding: 0;
+    margin: 0;
 }
 
-.product-price .original-price {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
-  color: hsl(228, 12%, 48%);
-  text-decoration: line-through;
+ul.Ingredients-list li {
+    margin: 5px 25px;
+    font-weight: 400;
+    color: hsl(28, 63%, 32%);
+    font-size: 1.2rem;
+    width: 100%;
 }
 
-.add-to-cart {
-  background-color: hsl(158, 36%, 37%);
-  color: hsl(0, 0%, 100%);
-  border: none;
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%; /* full width */
+.instruction-sec{
+    font-weight: 400;
+    color: hsl(27, 27%, 41%);
+    font-size: 1.2rem;
+    margin: 10px;
 }
 
-.add-to-cart:hover {
-  background-color: hsl(158, 36%, 20%);
+.Instructions {
+    font-weight: 700;
+    font-size: 2.0rem;
+    color: hsl(28, 63%, 32%);
+    margin: 15px;
+    width: 100%;
 }
 
-.add-to-cart img {
-  width: 1rem;
-  height: auto;
+.nutrition{
+    font-weight: 700;
+    font-size: 2.0rem;
+    color: hsl(28, 63%, 32%);
+    margin: 15px;
+    width: 100%;
+}
+
+.nutrition-description{
+    font-weight: 400;
+    color: hsl(27, 27%, 41%);
+    font-size: 1.2rem;
+    margin: 20px;
+}
+
+table{
+    width: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    color: hsl(28, 63%, 32%);
+}
+
+td{
+    padding: 10px;
+    border-bottom: 1px solid hsl(28, 63%, 32%);
+    text-align: left;
 }
 
 @media (max-width: 600px) {
-  .card {
-    grid-template-columns: 1fr;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .card-img img {
-    border-radius: 0.5rem 0.5rem 0 0; /* Rounded top corners */
-  }
-
-  .card-content {
-    text-align: center;
+  section {
     padding: 1.5rem;
+    margin: 1rem;
+    max-width: 100%;
+    border-radius: 15px;
   }
 
-  .add-to-cart-btn {
-    width: 100%; /* Make the button stretch full width */
+  .recipe-name {
+    font-size: 2.32rem;
+    text-align: left;
+    font-weight: 550;
+  }
+
+  .Ingredients,
+  .Instructions,
+  .nutrition,
+  .prep-time {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  .instruction-list,
+  .Ingredients-list,
+  .prep-time-list {
+    margin-left: 1.25rem;
+    padding-left: 1rem;
+  }
+
+  .instruction-sec,
+  .nutrition-sect,
+  .ingrediation-sect,
+  .prep {
+    margin-bottom: 1.5rem;
+  }
+
+  table td {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }
